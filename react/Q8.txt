@@ -1,0 +1,44 @@
+
+Controlled Components:
+A controlled component in React is one where the component's state is managed by React itself. The component receives its current value and any changes to it are notified to React using event handlers. The state of the component is controlled by React, and any updates to the value are reflected in the component's UI.
+
+
+import React, { useState } from 'react';
+
+const ControlledComponent = () => {
+  const [value, setValue] = useState('');
+
+  const handleChange = (event) => {
+    setValue(event.target.value);
+  };
+
+  return (
+    <input type="text" value={value} onChange={handleChange} />
+  );
+};
+
+
+
+
+Uncontrolled Components:
+An uncontrolled component in React is one where the component's state is handled by the DOM itself rather than by React. The component renders an initial value, and after that, the state of the component resides in the DOM. To access the value or handle changes, we rely on DOM manipulation techniques or references.
+
+
+
+import React, { useRef } from 'react';
+
+const UncontrolledComponent = () => {
+  const inputRef = useRef(null);
+
+  const handleClick = () => {
+    const value = inputRef.current.value;
+    console.log(value);
+  };
+
+  return (
+    <div>
+      <input type="text" ref={inputRef} />
+      <button onClick={handleClick}>Get Value</button>
+    </div>
+  );
+};
