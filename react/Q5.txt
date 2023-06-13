@@ -1,0 +1,6 @@
+
+- Keys in React are special attributes used to provide a unique identity to elements in a list when rendering dynamically.
+- They enable React to efficiently update, reorder, or delete specific elements in a list without re-rendering the entire list.
+- The advantages of using keys are efficient reconciliation, stable component identity, and improved performance.
+- Keys should be unique and stable identifiers associated with each item in the list.
+- Providing keys is recommended when rendering lists of components in React to optimize performance and prevent unnecessary re-renders.
