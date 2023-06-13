@@ -1,0 +1,10 @@
+react is a open source js library used to build single page applications in component based approach.
+
+supports server side rendering
+uses virtual dom to manipulate / update the states.
+uses reuseable components to make the ui.
+follows uni directional data flow
+
+react uses virtual dom which makes the updates in states less expensive as compared to dom manipulation.
+react gives us wide variety of library for the development of applications.
+react uses reuseable components to build ui which makes it easier for developers to build the components with same functionalities in a sec.
