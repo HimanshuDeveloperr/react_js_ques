@@ -1,0 +1,5 @@
+jsx is also known as javascript xml which gives user the ability to write httl in js  
+
+react uses react.createemlent("element","attributes","content")
+
+for telling the and transforming the jsx elements into js code and the virtual dom updated the neccessary update and show it into our actual dom.
