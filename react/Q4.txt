@@ -1,0 +1,8 @@
+state variable are the ones which are mutable and effects the components rendering when the state updates the whole component re-renders itself picking the new data of that variable.
+
+state variables are accessable from within the component it is declared
+
+normal variable are exact opposite of this state variables they are immutable and had a accessibility from where they are derived and we wont be munting the dom when the normal variables gets udated.
+
+
+state variables are to be used when u need to update the data during the lifecycle of the components
