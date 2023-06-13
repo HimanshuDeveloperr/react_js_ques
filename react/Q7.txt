@@ -1,0 +1,14 @@
+DOM stands for Document Object Model. It is a programming interface for web documents, representing the structure of an HTML or XML document as a tree-like model. The DOM allows scripts to dynamically access and manipulate the elements, attributes, and text content of a web page.
+
+The virtual DOM is a concept used by React to optimize the rendering process. It is a lightweight copy or representation of the actual DOM that React maintains and operates on. Rather than directly manipulating the real DOM, React makes changes to the virtual DOM and then efficiently updates the real DOM based on the differences between the virtual and actual DOM.
+
+
+
+
+Initial Render: When a React component is initially rendered, it creates a virtual DOM representation of the component's UI.
+
+Reconciliation: When a component's state or props change, React performs a process called reconciliation. It compares the previous virtual DOM with the new one to determine the minimal set of changes needed to update the UI.
+
+Diffing: React's reconciliation process involves a diffing algorithm that efficiently finds the differences between the previous and new virtual DOM representations. It identifies which elements have changed, been added, or been removed.
+
+Update the Real DOM: Once the differences are identified, React updates the real DOM by making the necessary changes to reflect the new virtual DOM. This process, called "reconciliation commit," ensures that only the required changes are applied to the real DOM, minimizing unnecessary updates and improving performance.
