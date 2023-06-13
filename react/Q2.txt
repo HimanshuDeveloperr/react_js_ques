@@ -1,0 +1,6 @@
+
+- A library is a collection of pre-written code that provides specific functionality and can be reused by developers.
+- A framework is a more comprehensive collection of libraries, tools, and conventions that provides a foundation for building applications.
+- Libraries are focused on solving specific problems and provide features that developers can selectively use.
+- Frameworks define the overall structure and flow of an application, enforcing rules and conventions for development.
+- React is a JavaScript library that focuses on building user interfaces for web applications. It is not a complete framework but can be complemented with other tools to build a full application framework.
