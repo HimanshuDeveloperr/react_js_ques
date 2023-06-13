@@ -1,0 +1,24 @@
+usestate is a hook in react use to manage state 
+state is the change in data during the lifecycle of components.
+
+used state returs an intial value and a  function to update that value
+
+it takes an inital value as its argument
+
+import React, { useState } from 'react';
+
+const ExampleComponent = () => {
+  // Using useState to manage a state variable called "count"
+  const [count, setCount] = useState(0);
+
+  const incrementCount = () => {
+    setCount(count + 1);
+  };
+
+  return (
+    <div>
+      <p>Count: {count}</p>
+      <button onClick={incrementCount}>Increment</button>
+    </div>
+  );
+};
