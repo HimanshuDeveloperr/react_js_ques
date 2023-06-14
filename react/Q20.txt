@@ -1,0 +1,22 @@
+child-to-parent communication can be achieved by passing callback functions from the parent component to the child component as props. The child component can then invoke these callback functions to communicate with its parent(lifting the state)
+
+
+
+import React from 'react';
+
+function ParentComponent() {
+  const handleChildData = (data) => {
+    console.log('Received data from child:', data);
+  };
+
+  return <ChildComponent sendData={handleChildData} />;
+}
+
+function ChildComponent(props) {
+  const handleClick = () => {
+    const data = 'Hello, parent!';
+    props.sendData(data);
+  };
+
+  return <button onClick={handleClick}>Send Data</button>;
+}
