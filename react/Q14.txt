@@ -1,0 +1,7 @@
+react has 3 lifecycle phases
+
+mounting:-when the component renders for the first time.
+
+updated:due to any props getting updated or the component itself has a state variable which makes the components re-renders
+
+unmounting: when the component is no longer needed and is removed from the dom.
