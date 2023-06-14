@@ -1,0 +1,13 @@
+props (short for "properties") are a way to pass data from a parent component to its child components.
+
+Props are passed down from parent components to child components, creating a unidirectional data flow in React.
+
+
+Props are immutable, meaning they cannot be modified by the child components that receive them. They are read-only and should not be directly modified within the child components.
+
+
+react state are the inbuilt  feature that represents the internal data of the component and could manage inside the component only.
+
+State is mutable and can be updated within the component using the setState function (in class components) or the useState hook (in functional components).
+
+State is local to the component in which it is defined and can only be accessed and modified within that component. Props, on the other hand, can be accessed by child components that receive them, but they cannot be modified directly within those child components.
