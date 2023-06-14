@@ -1,0 +1,16 @@
+Error boundaries are React components that catch JavaScript errors that occur during rendering, lifecycle methods, or in the entire component tree below them. They help to prevent the entire application from crashing due to a single error and allow for graceful error handling
+
+
+
+Error Catching: Error boundaries are special components that implement the componentDidCatch lifecycle method. This method is invoked when an error occurs within the component tree below the boundary.
+
+Component Hierarchy: Error boundaries are placed around the components that might throw errors. They create a boundary within the component tree, allowing them to catch errors and prevent them from propagating further up the tree.
+
+Preventing App Crashes: When an error is caught by an error boundary, it allows the rest of the application to continue functioning instead of crashing the entire app. Error boundaries provide an opportunity to display a fallback UI or an error message to the user.
+
+Handling Uncaught Errors: Error boundaries can only catch errors that occur during rendering or within their child components' lifecycle methods. They do not catch errors that occur within event handlers, asynchronous code, or during server-side rendering.
+
+Multiple Error Boundaries: React supports the nesting of error boundaries, meaning you can have multiple boundaries at different levels of the component tree to handle errors in different parts of the application.
+
+
+The key difference between error boundaries and other components is the error handling capability they provide. While regular components are primarily responsible for rendering UI and handling user interactions, error boundaries have the additional responsibility of catching and handling errors that occur within their child components
