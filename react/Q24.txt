@@ -1,0 +1,44 @@
+import { useState } from 'react';
+
+const useCounter = (initialValue) => {
+  const [count, setCount] = useState(initialValue);
+
+  const increment = () => {
+    setCount(count + 1);
+  };
+
+  const decrement = () => {
+    setCount(count - 1);
+  };
+
+  return {
+    count,
+    increment,
+    decrement,
+  };
+};
+
+export default useCounter;
+
+
+
+
+import React from 'react';
+import useCounter from './useCounter';
+
+const CounterComponent = () => {
+  const { count, increment, decrement } = useCounter(0);
+
+  return (
+    <div>
+      <div>Count: {count}</div>
+      <button onClick={increment}>Increment</button>
+      <button onClick={decrement}>Decrement</button>
+    </div>
+  );
+};
+
+export default CounterComponent;
+
+
+Custom hooks in React are reusable functions that encapsulate logic and stateful behavior. They enable you to extract and share common functionality among multiple components, promoting code reuse and simplifying development
