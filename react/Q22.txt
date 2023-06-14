@@ -1,0 +1,35 @@
+higher order component helps us to reduce the repetativeness of similar logic by storing the logic inside itself and providing it for the components 
+
+it is a component which takes function/component as its arguments and returns an enhanced component.
+
+import React, { useEffect } from 'react';
+
+const withLogger = (WrappedComponent) => {
+  const WithLogger = (props) => {
+    useEffect(() => {
+      console.log('Component was mounted.');
+
+      return () => {
+        console.log('Component will unmount.');
+      };
+    }, []);
+
+    return <WrappedComponent {...props} />;
+  };
+
+  return WithLogger;
+};
+
+const MyComponent = () => {
+  return <div>Hello, World!</div>;
+};
+
+const EnhancedComponent = withLogger(MyComponent);
+
+const App = () => {
+  return <EnhancedComponent />;
+};
+
+export default App;
+
+"https://youtu.be/tsCoBd7xSK8"
