@@ -1,0 +1,11 @@
+In React, the return statement of a functional component is called whenever the component is rendered or re-rendered. The return statement defines the structure and content of the component's output, which is typically rendered as HTML or JSX.
+
+When a functional component is initially rendered, or when its state or props change, React triggers a re-render of the component. During this re-render, the function body of the component is executed, including the return statement. The return statement determines what JSX or elements should be rendered as the output of the component.
+
+
+import React from 'react';
+
+function MyComponent() {
+  const message = 'Hello, world!';
+  return <div>{message}</div>;
+}
