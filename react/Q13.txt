@@ -1,0 +1,8 @@
+Hooks should only be called at the top level: Hooks should be called directly within the functional component body or from custom hooks. They should not be called within nested functions, loops, or conditional statements.
+
+Reason: React relies on the order in which hooks are called to maintain the consistent state between renders. If hooks are called conditionally or within nested functions, it can lead to unexpected behavior and make it difficult for React to determine the correct order of execution for hooks.
+
+
+Call Hooks in the same order every time: Make sure the order of calling Hooks remains consistent between renders of a component.
+
+ React remembers the order of Hooks from one render to another. If the order changes between renders, React won't be able to match up the state correctly, causing bugs and unexpected behavior.
