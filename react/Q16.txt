@@ -1,2 +1,13 @@
 useEffect hook is used to handle the side effects of the react components such as http request and all 
 it is first callled during the mounting stage and then we could conditionally decide the invoing of the useEffect state ourselves.
+
+we could also called the used effect during the unmountiong stage by giveng it return function inside it
+
+useEffect=(()=>{
+
+    logic
+
+    return ()=>{
+        cleanup function called after unmounting of the components
+    }
+},[dependencies])
