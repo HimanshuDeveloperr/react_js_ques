@@ -1,0 +1,22 @@
+react hooks are the functions provided to us by the react library which gives us the power
+ use state and other React features in functional components without writing a class
+
+
+
+
+React Hooks:
+- Enable stateful logic in functional components.
+- Provide access to React features like state management and lifecycle methods.
+- Include built-in hooks for common use cases.
+- Allow the creation of custom hooks to encapsulate and reuse logic.
+- Preserve state between re-renders of a component.
+- Offer a simpler and more readable syntax for managing state and side effects.
+- Have closures over state and props, providing access to specific component values.
+
+Normal Functions:
+- Do not have built-in access to React features like state management and lifecycle methods.
+- Cannot preserve state between re-renders.
+- Lack the simplicity and readability provided by hooks.
+- Do not automatically have access to component-specific state and props values.
+
+In summary, React Hooks empower functional components with stateful logic and access to React features, while normal functions do not have these capabilities by default. Hooks provide simplicity, state preservation, and reusable logic through custom hooks.
