@@ -1,0 +1,2 @@
+useEffect hook is used to handle the side effects of the react components such as http request and all 
+it is first callled during the mounting stage and then we could conditionally decide the invoing of the useEffect state ourselves.
