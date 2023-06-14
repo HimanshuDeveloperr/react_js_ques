@@ -1,0 +1,74 @@
+Lift State Up: If the siblings need to share state, you can lift the state up to their closest common ancestor. The parent component holds the shared state and passes it to the sibling components as props. The siblings can then update the shared state by invoking callback functions passed from the parent.
+
+
+import React, { useState } from 'react';
+
+function ParentComponent() {
+  const [sharedState, setSharedState] = useState('');
+
+  const handleChange = (event) => {
+    setSharedState(event.target.value);
+  };
+
+  return (
+    <div>
+      <SiblingComponent1 sharedState={sharedState} onChange={handleChange} />
+      <SiblingComponent2 sharedState={sharedState} />
+    </div>
+  );
+}
+
+function SiblingComponent1(props) {
+  return (
+    <input
+      type="text"
+      value={props.sharedState}
+      onChange={props.onChange}
+    />
+  );
+}
+
+function SiblingComponent2(props) {
+  return <div>{props.sharedState}</div>;
+}
+
+
+
+
+Context API: React's Context API allows you to create a shared context and provide it to the sibling components. The context acts as a global state accessible by all descendants, eliminating the need to pass props through intermediate components
+
+
+import React, { createContext, useContext } from 'react';
+
+// Create a context
+const ThemeContext = createContext();
+
+// Create a component that uses the context
+function ThemedButton() {
+  const theme = useContext(ThemeContext);
+
+  return (
+    <button style={{ background: theme.background, color: theme.text }}>
+      Themed Button
+    </button>
+  );
+}
+
+// Create a parent component that provides the context value
+function App() {
+  const theme = {
+    background: 'lightblue',
+    text: 'white',
+  };
+
+  return (
+    <ThemeContext.Provider value={theme}>
+      <div>
+        <h1>App Component</h1>
+        <ThemedButton />
+      </div>
+    </ThemeContext.Provider>
+  );
+}
+
+export default App;
