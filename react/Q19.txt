@@ -1,0 +1,14 @@
+ parent-to-child communication can be achieved by passing data from a parent component to a child component through props. The parent component can pass down any required data or functions as props to its child component, enabling communication between them
+
+
+ import React from 'react';
+
+function ParentComponent() {
+  const message = 'Hello, child!';
+
+  return <ChildComponent message={message} />;
+}
+
+function ChildComponent(props) {
+  return <div>{props.message}</div>;
+}
