@@ -1,0 +1,31 @@
+
+ex of licycles in react
+
+import React, { useState, useEffect } from 'react';
+
+const MyComponent = () => {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    console.log('Component mounted.');
+
+    return () => {
+      console.log('Component will unmount.');
+    };
+  }, []);
+
+  useEffect(() => {
+    console.log('Component updated.');
+  }, [count]);
+
+  console.log('Render method called.');
+
+  return (
+    <div>
+      <div>Count: {count}</div>
+      <button onClick={() => setCount(count + 1)}>Increment</button>
+    </div>
+  );
+};
+
+export default MyComponent;
