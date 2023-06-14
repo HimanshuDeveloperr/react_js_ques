@@ -1,0 +1,6 @@
+Prop drilling is a term used in React to describe the process of passing props through multiple layers of components to reach a deeply nested child component that needs access to those props. It occurs when intermediate components do not require the props but need to pass them down to child components.
+
+
+Context API The Context API allows you to create a shared state that can be accessed by multiple components without passing props explicitly
+
+Redux: Redux is a state management library that centralizes the application state in a global store. It provides a way to access the state from any component without prop drilling.
