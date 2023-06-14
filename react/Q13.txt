@@ -6,3 +6,34 @@ Reason: React relies on the order in which hooks are called to maintain the cons
 Call Hooks in the same order every time: Make sure the order of calling Hooks remains consistent between renders of a component.
 
  React remembers the order of Hooks from one render to another. If the order changes between renders, React won't be able to match up the state correctly, causing bugs and unexpected behavior.
+
+
+ import React, { useState, useEffect } from 'react';
+
+const ExampleComponent = () => {
+  // Correct: Hooks are called in the same order every time
+  const [count, setCount] = useState(0);
+  useEffect(() => {
+    // Effect logic...
+  }, [count]);
+
+  // Incorrect: Hooks are not called in the same order every time
+  // This violates the rule!
+  useEffect(() => {
+    // Effect logic...
+  }, [count]);
+  const [name, setName] = useState('John');
+
+  return (
+    <div>
+      <p>Count: {count}</p>
+      <button onClick={() => setCount(count + 1)}>Increment</button>
+      <p>Name: {name}</p>
+      <input
+        type="text"
+        value={name}
+        onChange={(e) => setName(e.target.value)}
+      />
+    </div>
+  );
+};
