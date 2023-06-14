@@ -1,0 +1,26 @@
+Memoization: Memoization is a technique that caches the results of expensive function calls and returns the cached result when the same inputs occur again. This can help optimize expensive computations or calculations in a component
+
+import React, { useMemo } from 'react';
+
+function ExpensiveComponent({ data }) {
+  const processedData = useMemo(() => {
+    // Expensive computation or data processing
+    return processData(data);
+  }, [data]);
+
+  return <div>{processedData}</div>;
+}
+
+
+
+
+
+
+Virtualization: Virtualization is the technique of rendering only the visible portion of a large list or data set, rather than rendering all items at once. This approach reduces the initial rendering time and improves scrolling performance.
+
+
+
+
+
+
+Code Splitting: Code splitting involves splitting your JavaScript bundle into smaller chunks, allowing the browser to load only the necessary code for a particular route or component. This can reduce the initial load time and improve performance.
