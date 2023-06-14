@@ -1,0 +1,2 @@
+react components could be styled using inline styling , using css stylesheet
+/extebal styling,using css modules ,as react provides many libraries also to style components such as bootstrap
