@@ -1,0 +1,23 @@
+5. Difference between React.memo and useMemo.?
+
+
+React.memo is a higher-order component (HOC) that is used for memoizing functional components. It helps optimize performance by preventing unnecessary re-renders of the component when its props have not changed.
+
+useMemo is a hook used for memoizing a value, whether it's a computed value, a function result, or an expensive calculation. It helps optimize performance by avoiding unnecessary re-computation of the value when its dependencies have not changed.
+
+
+React.memo:
+
+Higher-order component (HOC) for memoizing functional components.
+Optimizes performance by preventing unnecessary re-renders.
+Compares previous and current props to decide if re-rendering is needed.
+Returns a memoized version of the component.
+Does not affect the rendering of child components.
+useMemo:
+
+Hook used for memoizing a specific value.
+Optimizes performance by avoiding unnecessary re-computations.
+Takes a function and an array of dependencies.
+Recalculates the value only when the dependencies change.
+Returns the memoized value itself.
+Does not affect the rendering of the component directly.
