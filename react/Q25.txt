@@ -1,0 +1,1 @@
+reconciliation is the phenomenon where the react compares the current dom state with its previous state and updates the things which are updated in new state and show it to the dom without re-rendering it  
