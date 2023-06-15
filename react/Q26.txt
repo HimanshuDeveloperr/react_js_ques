@@ -1,0 +1,2 @@
+fragments are the react features that acts like a wrapper component which takes in multiple elements inside it and return and show it to our webpage without creating an extra dom node ,
+it makes our code readable,optimize and helps in faster rendering
