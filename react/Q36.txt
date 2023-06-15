@@ -1,0 +1,6 @@
+The Context API in React is a feature that allows you to manage global state and share data between components without having to pass props down manually through every level of the component tree. It provides a way to pass data through the component tree without using props explicitly.
+
+The Context API works based on two main components: the Provider and the Consumer.
+
+The Provider component defines the context and provides the data or state to be shared. It wraps the components that need access to the context data.
+The Consumer component is used within the child components to access the shared data from the Provider. It allows consuming the context values and utilizing them within the component
