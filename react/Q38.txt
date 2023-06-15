@@ -1,0 +1,18 @@
+ side effects refer to any behavior or actions that occur outside the scope of the component's render cycle. They include operations such as fetching data from an API, manipulating the DOM, subscribing to event listeners, and more. React provides hooks to handle different types of side effects.
+
+
+ Fetching Data:
+
+Use useEffect to fetch data from an API or perform asynchronous operations.
+Subscriptions and Event Listeners:
+
+Use useEffect to subscribe to event listeners and clean up the subscriptions when the component unmounts.
+Modifying the DOM:
+
+Use useEffect to perform DOM manipulations, such as updating the title or modifying CSS classes.
+Timers and Intervals:
+
+Use useEffect to set up timers or intervals and clean them up to prevent memory leaks.
+Optimizing Expensive Operations:
+
+Use useMemo to memoize expensive calculations or computations and avoid unnecessary re-execution.
