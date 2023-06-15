@@ -1,0 +1,1 @@
+react does not create any extra element when using fragments its sole purpose is to render the child elements that are inside the parent fragment elements.
