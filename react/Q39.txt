@@ -1,0 +1,4 @@
+ Can useeffect return anything? When is the return function of useffect called ?
+
+ it returns a callback function which is usually known as clean up function where you clear the things inside the useEffect function 
+ it gets called during the unmounting phase of our dom.
