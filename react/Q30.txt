@@ -1,0 +1,4 @@
+the children prop is a special prop that allows you to pass child elements or content to a component.
+
+
+The children prop can be used when you want to create a component that acts as a container or wrapper for other components or conten
