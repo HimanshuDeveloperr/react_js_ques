@@ -1,0 +1,1 @@
+as we know that the class is a reserved attribute for giving classes in js and jsx is an extension of js so react ensures by using classname rather than class that there should not be any conflicts between the two.
