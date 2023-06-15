@@ -1,0 +1,13 @@
+React router is a react library which is used to make  a single page application with the help of react router we could seamlessly navigate from one page to another .
+
+
+to use react router first import 
+
+{routes,route,browserRouter as router } from react router
+
+
+<router>
+<routes>
+<route path="/" element={<home/>/}
+<routes/>
+<router/>
