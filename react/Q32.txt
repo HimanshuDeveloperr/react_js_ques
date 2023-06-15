@@ -1,0 +1,98 @@
+In React Router, passing data between sibling components can be achieved by utilizing route parameters or using state management libraries like Redux or React Context. I'll explain both approaches:
+
+1. **Using Route Parameters**: React Router allows you to pass data between sibling components by using route parameters. Here's an example:
+
+   <Route path="/component1/:data" element={<Component1 />} />
+   <Route path="/component2/:data" element={<Component2 />} />
+
+   In this example, the route paths include a parameter called `data` that can be accessed in the components.
+
+   // Component1.js
+   import { useParams } from 'react-router-dom';
+
+   function Component1() {
+     const { data } = useParams();
+
+     // Use the `data` parameter in Component1
+
+     return <div>Component 1</div>;
+   }
+
+   // Component2.js
+   import { useParams } from 'react-router-dom';
+
+   function Component2() {
+     const { data } = useParams();
+
+     // Use the `data` parameter in Component2
+
+     return <div>Component 2</div>;
+   }
+
+   Now, when you navigate to `/component1/someData` and `/component2/someOtherData`, the corresponding components can access the passed data through the `useParams` hook and use it as needed.
+
+2. **Using State Management Libraries**: Another approach is to use state management libraries like Redux or React Context to share data between sibling components. These libraries provide a centralized state that can be accessed by multiple components.
+
+   Here's a simplified example using React Context:
+
+   ```jsx
+   // DataContext.js
+   import React, { createContext, useState } from 'react';
+
+   export const DataContext = createContext();
+
+   export function DataProvider({ children }) {
+     const [data, setData] = useState('');
+
+     return (
+       <DataContext.Provider value={{ data, setData }}>
+         {children}
+       </DataContext.Provider>
+     );
+   }
+   ```
+
+   Wrap your components with the `DataProvider` to make the context available:
+
+   ```jsx
+   // App.js
+   import { DataProvider } from './DataContext';
+
+   function App() {
+     return (
+       <DataProvider>
+         <Router>
+           {/* Your routes here */}
+         </Router>
+       </DataProvider>
+     );
+   }
+   ```
+
+   Now, any component that needs access to the shared data can use the `useContext` hook:
+
+   // Component1.js
+   import { useContext } from 'react';
+   import { DataContext } from './DataContext';
+
+   function Component1() {
+     const { data } = useContext(DataContext);
+
+     // Use the shared `data` in Component1
+
+     return <div>Component 1</div>;
+   }
+
+   // Component2.js
+   import { useContext } from 'react';
+   import { DataContext } from './DataContext';
+
+   function Component2() {
+     const { data } = useContext(DataContext);
+
+     // Use the shared `data` in Component2
+
+     return <div>Component 2</div>;
+   }
+
+   
