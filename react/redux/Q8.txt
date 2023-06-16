@@ -1,0 +1,1 @@
+if you want to check of errors and do a data validation there is a feature called middleware which take cares of the things that happen between dispatching an action and updating the reducer using it
