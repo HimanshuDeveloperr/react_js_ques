@@ -1,0 +1,19 @@
+In Redux's architecture, an action is a plain JavaScript object that describes an intention to change the state of an application. It represents a specific event or user interaction and carries the necessary information to perform the state update
+
+An action typically has two properties:
+
+type: A string that describes the type of action being performed. It serves as a unique identifier for the action and is usually defined as a constant value to ensure consistency across the application.
+
+payload: Additional data or information associated with the action. It provides the necessary details to update the state based on the action.
+
+const ADD_TODO = 'ADD_TODO';
+
+const addTodo = (text) => {
+  return {
+    type: ADD_TODO,
+    payload: {
+      text: text,
+      completed: false
+    }
+  };
+};
