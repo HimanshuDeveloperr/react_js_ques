@@ -1,0 +1,13 @@
+Action Creation: User interactions or events trigger the creation of actions. Actions are plain JavaScript objects that describe an intention to change the application state. They contain a type property that identifies the action type and may include additional data in the payload property.
+
+Action Dispatch: Actions are dispatched to the Redux store using the dispatch function. This function is provided by the Redux store and is accessible throughout the application. Dispatching an action triggers the process of updating the state.
+
+Reducers: Reducers are pure functions that handle dispatched actions and update the state accordingly. Each reducer is responsible for managing a specific part of the application state. When an action is dispatched, the corresponding reducer receives the current state and the action as input and returns a new state object.
+
+State Update: The combined output from all the reducers is used to create the updated application state. The state is immutable, meaning that it is not modified directly but replaced with a new state object.
+
+Subscription and Re-render: React components that are subscribed to relevant parts of the state are notified of the state changes. This subscription is established using the connect function provided by the react-redux library or the newer useSelector and useDispatch hooks. When the state changes, the subscribed components re-render to reflect the updated data.
+
+Component Rendering: The React components receive the updated state as props and re-render based on the new data. Each component determines its own rendering logic based on the received props and triggers the necessary UI updates.
+
+User Interaction: The user interacts with the components, triggering the cycle again by creating and dispatching new actions.
