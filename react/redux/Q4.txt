@@ -1,0 +1,20 @@
+The getState() method returns the current state held in the Redux store
+
+const state = store.getState();
+console.log(state.todos); // Accessing the 'todos' state slice
+
+dispatch(action): The dispatch() method is used to dispatch an action to the Redux store
+
+const action = { type: 'ADD_TODO', payload: { text: 'Buy groceries', completed: false } };
+store.dispatch(action);
+
+subscribe(listener): The subscribe() method allows you to register a listener function that will be called whenever the state in the Redux store changes. It provides a way to react to state updates and perform additional logic or trigger re-renders in your application.
+
+const listener = () => {
+  console.log('State updated:', store.getState());
+};
+
+const unsubscribe = store.subscribe(listener);
+
+// Later, to unsubscribe the listener:
+unsubscribe();
