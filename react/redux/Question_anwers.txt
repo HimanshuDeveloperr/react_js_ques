@@ -1,0 +1,41 @@
+redux is a open source js library used to manage multiple state for complex applications.it is based on the flux design pattern
+
+
+
+
+
+redux are more often use for managing state as they are predictable states and has unidirectional flow of data and state and maintains only one store for multiple states of different components.
+
+
+
+flux are the architecture to maintain the flow of data in complex applications and are used to maintain the state of the components of the application famous js libraries like used flux for its refference to maintain state in unidirectional flow.
+
+
+
+redux core priciples:
+
+
+
+maintain only one global store to maintain the states.
+
+it updates state when an object explaining the events that needed to update are being dispatch from the component called as actions.
+
+Changes are made with pure functions: This principle means that in order to define how the state tree is being transformed by the actions, we have to write pure reducers
+
+
+
+no as redux is js library means it could be used in any ui layers that support and uses js to create ui's
+
+
+
+
+
+the use of reducer depends on several parameters some of which are fllowed below:
+
+
+
+whether the state should be kept to the components itself or should be provided to the other components as well.
+
+whether the data that is changing is depended on any external data like API responses.
+
+A pure function is a function that, given the same input, will always produce the same output and has no side effects
