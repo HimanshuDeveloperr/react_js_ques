@@ -1,0 +1,18 @@
+What are the things which we should never do inside a reducer?.
+
+Mutate the state directly
+
+// Don't mutate the state directly
+state.todos.push(action.payload);
+return state;
+
+// Create a new state object and return it
+return {
+  ...state,
+  todos: [...state.todos, action.payload]
+};
+
+
+Perform asynchronous operations Reducers should be synchronous and handle state changes based on the dispatched actions. Performing asynchronous operations, such as API calls or timeouts, directly inside a reducer is not appropriate. Use middleware like Redux Thunk or Redux Saga to handle asynchronous actions.
+
+Access the DOM: Reducers should not have any knowledge or interaction with the DOM. They should remain independent of the UI layer and focus on state management.
