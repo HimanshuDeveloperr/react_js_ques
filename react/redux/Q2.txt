@@ -1,0 +1,17 @@
+ reducers are responsible for handling actions and updating the application state based on those actions. Reducers are pure functions that take the current state and an action as input and return a new state. They use the action's type to determine how to update the state.
+
+ const initialState = {
+  todos: []
+};
+
+const todoReducer = (state = initialState, action) => {
+  switch (action.type) {
+    case 'ADD_TODO':
+      return {
+        ...state,
+        todos: [...state.todos, action.payload]
+      };
+    default:
+      return state;
+  }
+};
