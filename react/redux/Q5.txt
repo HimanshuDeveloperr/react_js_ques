@@ -1,0 +1,16 @@
+// Import necessary Redux dependencies
+import { createStore } from 'redux';
+
+// Define your initial state
+const initialState = {
+  todos: [],
+  user: null
+};
+
+// Define your reducer function
+const rootReducer = (state = initialState, action) => {
+  // Reducer logic...
+};
+
+// Create the Redux store with the initial state
+const store = createStore(rootReducer);
