@@ -1,0 +1,1 @@
+In React Redux, the connect function is a higher-order function provided by the react-redux library. It connects React components to the Redux store, allowing them to access the store's state and dispatch actions.
